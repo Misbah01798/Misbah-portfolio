@@ -4,47 +4,44 @@ import React, { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import ProjectTab from "./ProjectTab";
-import img1 from '../assets/projects/10.png'
-import img2 from '../assets/projects/7.png'
-import img3 from '../assets/projects/11.png'
-import img4 from '../assets/projects/9.png'
+
 
 const projectsData = [
   {
     id: 1,
     title: "Easy Shop Website",
     description: "Project shop description",
-    image: {img1},
+    image: '/src/assets/projects/10.png',
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Misbah01798/Easy-shop-client.git",
+    previewUrl: "https://assignment-ten-auth-7a38c.web.app/",
   },
   {
     id: 2,
     title: "Potography Portfolio Website",
     description: "Project 2 description",
-    image: {img2},
+    image: '/src/assets/projects/7.png',
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Misbah01798/My-portfolio",
-    previewUrl: "/",
+    previewUrl: "https://misbah-uddin-30ae8.web.app/",
   },
   {
     id: 3,
     title: "Biology Coaching Home",
     description: "Project 3 description",
-    image: {img3},
+    image:'/src/assets/projects/11.png',
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Misbah01798/biology-web-1.git",
+    previewUrl: "https://assignment-nine-biology.web.app/",
   },
   
   {
     id: 4,
     title: "Resole Restaurent",
     description: "Resrautent Full stack Website",
-    image: {img4},
+    image:'/src/assets/projects/9.png',
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Misbah01798/resole-rastarent-2.git",
     previewUrl: "https://assignment-11-a280f.web.app",
   }
   
