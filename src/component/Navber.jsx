@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from '../assets/m.png'
-import mis from '../assets/mis.png'
+
 
 
 
@@ -42,8 +42,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="avatar navber-end">
-          <div className="w-24 rounded-full">
-            <img src={mis} />
+          <div className="w-24 rounded-full navbar-end">
+            <img src='https://i.ibb.co/wpqbNyV/IMG-20201004-221932.jpg' />
           </div>
         </div>
       </div>

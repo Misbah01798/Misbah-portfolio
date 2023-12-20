@@ -3,25 +3,25 @@ const skills = [
       id: 1,
       name: "React Js",
       value: 80 ,
-      image: "src/assets/react.png",
+      image: "https://i.ibb.co/CwZf8J5/react.png",
     },
     {
       id: 2,
       name: "MongoDB Database",
       value: 70 ,
-      image: "src/assets/mongo.png",
+      image: "https://i.ibb.co/dcBNHJK/mongo.png",
     },
     {
       id: 3,
       name: "JavaScript",
       value: 80 ,
-      image: "src/assets/js.png",
+      image: "https://i.ibb.co/41DQhnm/js.png",
     },
     {
       id: 4,
       name: "MySQL Database",
       value: 50 ,
-      image: "/src/assets/sql.png",
+      image: "https://i.ibb.co/LSWJSDv/sql.png",
     },
   ];
 

@@ -2,7 +2,7 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import mis from '../assets/mis.png'
 
 const Banner = () => {
@@ -40,20 +40,19 @@ const Banner = () => {
             I'm student of Computer Science Engineering.I work in <br/> Fontent Development in Website.
           </p>
           <div>
-            <Link
+            <NavLink to='contact'
               
               className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-purple-500 to-pink-500 hover:bg-slate-200 text-white"
             >
               Hire Me
-            </Link>
-            <Link
-            href="https://drive.google.com/file/d/1c1PL_3DnuKrC2fI0zo7bhmi8IJ0FDMmr/view"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-pink-500 hover:bg-slate-800 text-white mt-3"
-            >
+            </NavLink>
+           <a href="https://drive.google.com/file/d/1c1PL_3DnuKrC2fI0zo7bhmi8IJ0FDMmr/view" className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-purple-500 to-pink-500 hover:bg-slate-800 text-white mt-3">
+           
               <span className="block bg-gradient-to-br from-purple-500 to-pink-500 hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
               </span>
-            </Link>
+           
+           </a>
           </div>
         </motion.div>
         <motion.div
