@@ -1,31 +1,27 @@
 const skills = [
     {
       id: 1,
-      name: "Strategy & Direction",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      image: "src/assets/skills-1.png",
+      name: "React Js",
+      value: 80 ,
+      image: "src/assets/react.png",
     },
     {
       id: 2,
-      name: "Branding & Logo",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      image: "src/assets/skills-2.png",
+      name: "MongoDB Database",
+      value: 70 ,
+      image: "src/assets/mongo.png",
     },
     {
       id: 3,
-      name: "UI & UX Design",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      image: "src/assets/skills-3.png",
+      name: "JavaScript",
+      value: 80 ,
+      image: "src/assets/js.png",
     },
     {
       id: 4,
-      name: "Webflow Development",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-      image: "/src/assets/skills-4.png",
+      name: "MySQL Database",
+      value: 50 ,
+      image: "/src/assets/sql.png",
     },
   ];
 
@@ -33,21 +29,22 @@ const Skills = () => {
 
   return (
     <div className="lg:mx-12 mx-4 py-32" id="skills">
-      <div className="mb-20">
-        <p className="text-xl text-headingcolor font-semibold mb-5">
+      <div className="mb-20 text-center">
+        <p className="text-xl text-headingcolor font-semibold mb-5 text-white">
           My Skills
         </p>
-        <h2 className="md:text-5xl text-4xl text-headingcolor font-bold">My Expertise</h2>
+        <h2 className="md:text-5xl text-4xl text-headingcolor font-bold text-white">My Expertise</h2>
       </div>
 
 
       {/* skillis card */}
-      <div className=" grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
+      <div className=" grid items-center lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8">
         {
             skills.map( skill => <div key={skill.id} className="bg-bgShade p-8 rounded-lg cursor-pointer hover:-translate-y-5 transition-all duration-300">
                 <img src={skill.image} alt="" className="w-14 h-14 p-3 bg-white bg-white rounded-lg shadow-md mb-7"/>
+                <rect></rect>
                 <h3 className="text-2xl font-bold mb-4">{skill.name}</h3>
-                <p>{skill.description}</p>
+                <div className="radial-progress bg-primary text-primary-content border-4 border-primary" style={{"--value":`${skill.value}`}} role="progressbar">{skill.value}</div>
             </div>)
         }
       </div>

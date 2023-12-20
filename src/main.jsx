@@ -8,7 +8,7 @@ import routes from './route/Route.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
    <RouterProvider router={routes}>
-   <App />
+  
    </RouterProvider>
   </React.StrictMode>,
 )

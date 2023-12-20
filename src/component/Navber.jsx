@@ -1,68 +1,52 @@
 
 import React, { useState } from "react";
-import NavLink from "./NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from '../assets/m.png'
+import mis from '../assets/mis.png'
 
 
-const navLinks = [
-  {
-    title: "About",
-    path: "#about",
-  },
-  {
-    title: "Project",
-    path: "#projects",
-  },
-  {
-    title: "Contact",
-    path: "#contact",
-  },
-];
+
+const navLinks = <>
+  <li><NavLink to='/about'>About</NavLink></li>
+  <li><NavLink to='/projects'>Projects</NavLink></li>
+  <li><NavLink to='/contact'>Contact</NavLink></li>
+</>
 
 const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
     <nav className="fixed mx-auto border border-[#192871] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-30">
-      <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
-        <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-bold"
-        >
-          <div className="w-16 rounded-full">
-            <img src={logo} className="w-16 rounded-full"/>
+      <div className="navbar ">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </div>
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+
+              {navLinks}
+            </ul>
           </div>
-        </Link>
-        <div className="mobile-menu block md:hidden">
-          {!navbarOpen ? (
-            <button
-              onClick={() => setNavbarOpen(true)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <Bars3Icon className="h-5 w-5" />
-            </button>
-          ) : (
-            <button
-              onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
-            >
-              <XMarkIcon className="h-5 w-5" />
-            </button>
-          )}
+          <Link
+            to="/"
+            className="text-2xl md:text-5xl text-white font-bold"
+          >
+            <div className="w-16 rounded-full">
+              <img src={logo} className="w-16 rounded-full" />
+            </div>
+          </Link>
         </div>
-        <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink href={link.path} title={link.title} />
-              </li>
-            ))}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal text-blue-50 text-2xl font-bold px-1">
+            {navLinks}
           </ul>
         </div>
+        <div className="avatar navber-end">
+          <div className="w-24 rounded-full">
+            <img src={mis} />
+          </div>
+        </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
   );
 };
